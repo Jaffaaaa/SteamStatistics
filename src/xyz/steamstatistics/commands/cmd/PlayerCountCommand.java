@@ -138,8 +138,8 @@ public class PlayerCountCommand extends Command {
             int totalTerms = dataList.size();
             List<String> entries = new ArrayList<>();
             entries.add(dataList.get(0).month);
-            entries.add(dataList.get(totalTerms / 4).month);
-            entries.add(dataList.get(3*(totalTerms) / 4).month);
+            entries.add(dataList.get(totalTerms / 3).month);
+            entries.add(dataList.get((2 * totalTerms) / 3).month);
             entries.add(dataList.get(totalTerms - 2).month);
 
             int dateY = 348;
