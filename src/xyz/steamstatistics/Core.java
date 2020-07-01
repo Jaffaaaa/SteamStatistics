@@ -10,13 +10,10 @@ import net.dv8tion.jda.api.entities.Activity;
 import xyz.steamstatistics.commands.CommandManager;
 import xyz.steamstatistics.commands.cmd.*;
 import xyz.steamstatistics.data.GameShort;
-import xyz.steamstatistics.events.OnGuildJoinEvent;
 import xyz.steamstatistics.misc.FTPHandling;
 import xyz.steamstatistics.misc.SteamFunc;
 
 import javax.security.auth.login.LoginException;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.logging.Level;
 
 public class Core {
@@ -56,7 +53,6 @@ public class Core {
         this.steamKey = steamKey;
 
         new SteamFunc(this);
-        new OnGuildJoinEvent(this);
         GameShort.apply();
         java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(Level.OFF);
         System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
